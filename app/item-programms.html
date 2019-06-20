@@ -330,16 +330,19 @@ fetch(url)
 .then(response => response.json())
 .then(data => {
 		for (var i = 0; i < data.results.length; i++) {
-			console.log(data.results[i].content_ru)
 
 			var newpubdate = data.results[i].pub_date;
-			var newsdescription = data.results[i].title;
+
+			newpubdate = newpubdate.replace('T',' ');
+
+			var newsdescription = data.results[i].content_ru;
+			var newsbackground = data.results[i].image;
 
 			$('.news__wrapper > .container > .row').append(
 				'<div class="col-md-3">'
 				+ '<div class="news-item__box">'
-					+	'<div class="news-item-data__box">' + newsdescription + '</div>'
-						+ '<div class="news-item-banner__box">'
+					+	'<div class="news-item-data__box">' + newpubdate + '</div>'
+						+ '<div class="news-item-banner__box" style="background: url(' + newsbackground + ');">'
 							+ '<a class="news-item-banner-link" href="javascript:void(0)">Читати</a>'
 						+ '</div>'
 						+ '<div class="news-item-info__box">' + newsdescription + '</div>'
@@ -349,7 +352,7 @@ fetch(url)
 
 			var lenght = $('.news__wrapper .col-md-3').length;
 			if ( lenght == 8 ) {
-				return false;
+				break
 			}
 
 		}
