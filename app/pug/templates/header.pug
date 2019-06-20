@@ -1,12 +1,42 @@
 header.header
-	ul.header-items
-		li.header-item
-			a.header-link(href="") lorem
-		li.header-item
-			a.header-link(href="") lorem
-		li.header-item
-			a.header-link(href="") lorem
-		li.header-item
-			a.header-link(href="") lorem
-		li.header-item
-			a.header-link(href="") lorem
+	.container
+		.row
+			.col-md-12
+				.header__wrapper
+					.logo__box
+						include ../../img/logo.svg
+					.nav__box
+						nav.nav-items__box
+							ul.ul-items__box
+								li.li-item
+									a(href="javascript:void(0);") Про нас
+								li.li-item
+									a(href="javascript:void(0);") Новини
+								li.li-item
+									a(href="javascript:void(0);") Кому допомагаэмо
+								li.li-item
+									a(href="javascript:void(0);") Програми
+								li.li-item
+									a(href="javascript:void(0);") Як допомогти
+								li.li-item
+									a(href="javascript:void(0);") Звiтнicть
+					.social__box
+						ul.social-items__box
+							li.social-item
+								a(href="#")
+									include ../../img/icon-insta.svg
+							li.social-item
+								a(href="#")
+									include ../../img/icon-facebook.svg
+							li.social-item
+								a(href="#")
+									include ../../img/icon-ukraine.svg
+					.find__box
+						div.find-item__box
+							include ../../img/icon-search.svg
+					.help__box
+						a(class="help__button" href="") Допомогти
+					.lang__box
+						ul.lang-items__box
+							li.lang-item.lang-item-active UA
+							li.lang-item RU

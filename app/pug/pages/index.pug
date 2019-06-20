@@ -1,3 +1,230 @@
 extends ../default.pug
 block pageContent
 	include ../templates/header.pug
+	section.banner-start__wrapper
+		.container
+			.row
+				.col-md-6
+					.banner-first__box
+						h1.banner-title__box Ми благодійний #[br]фонд «Благомай»
+						p.banner-description__box Основний напрямок благодійної діяльності фонду - допомога дітям,
+							| що знаходяться в дитячих будинках та соціальна адаптація таких дітей до реального життя.
+						.banner-group-btn__box
+							a(href="#").our-programms__button Наші активні програми
+							a(class="help__button" href="") Допомогти
+				.col-md-6
+					img(src="img/angel.png", alt="")
+	section.active-programms__wrapper
+		.container
+			.row
+				.col-md-12
+					h2.active-programms-title__box Активнi програми
+				.col-md-4
+					.active-programm__box
+						.active-programm__banner
+							p.active-programm-title__banner Медичний кабiнет
+						.active-programm__content
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
+							a(class="active-programm-link__content" href="#") Докладнiше
+							div.active-programm-price__box
+								p 23%
+								p 35 000 грн
+							div.noneactive-priceblock__box
+								.active-priceblock__box Зiбрано
+				.col-md-4
+					.active-programm__box
+						.active-programm__banner
+							p.active-programm-title__banner Медичний кабiнет
+						.active-programm__content
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
+							a(class="active-programm-link__content" href="#") Докладнiше
+							div.active-programm-price__box
+								p 23%
+								p 35 000 грн
+							div.noneactive-priceblock__box
+								.active-priceblock__box Зiбрано
+				.col-md-4
+					.active-programm__box
+						.active-programm__banner
+							p.active-programm-title__banner Медичний кабiнет
+						.active-programm__content
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
+							a(class="active-programm-link__content" href="#") Докладнiше
+							div.active-programm-price__box
+								p 23%
+								p 35 000 грн
+							div.noneactive-priceblock__box
+								.active-priceblock__box Зiбрано
+				.col-md-12
+					.active-programm-allprogramm__wrapper
+						a(href="#" class="active-programm-allprogramm__box") Смотреть все программы
+	section.our-mission__wrapper
+		.container
+			.row
+				.col-md-6
+					img(src="img/angel-two.png", alt="")
+				.col-md-6
+					h3.our-mission-title__box Наша мiсiя
+					p.our-mission-info__box Благодійний фонд «Благомай» займається зміною усвідомленості людей в здійсненні благих справ, надає можливості робити добрі справи, допомагає робити добрі справи правильно і прищеплює звичку робити добрі справи. Фонд «Благомай» не належить до політичних, олігархічних або релігійних організацій  і не фінансуються ними для їх реклами.
+					div.our-mission-link__box
+						a(href="#" class="our-mission-link") Детальнiше
+	section.news__wrapper
+		.container
+			.row
+				.col-md-12
+					h2.news-title__box Новини
+				//- .col-md-3
+					div.news-item__box
+						.news-item-data__box
+							div.news-item-data-time__box 12:30
+							div.news-item-data-date__box 26.04.2019
+						.news-item-banner__box
+							a(class="news-item-banner-link" href="javascript:void(0)") Читати
+						.news-item-info__box
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nobis.
+	section.home-numeral__wrapper
+		.container
+			.row
+				.col-md-12
+					h2.home-numeral-title__box Основні цифри
+				.col-md-3
+					div.home-numeral-item__box
+						.home-numeral-img__box
+							img(src="img/xmarinka.png", alt="")
+							p.home-numeral-img-txt__box 80 #[br] чоловiк
+						p Витрачено на #[br] Благо
+				.col-md-3
+					div.home-numeral-item__box
+						.home-numeral-img__box
+							img(src="img/xmarinka.png", alt="")
+							p.home-numeral-img-txt__box 80 #[br] чоловiк
+						p Під опікою фонда
+				.col-md-3
+					div.home-numeral-item__box
+						.home-numeral-img__box
+							img(src="img/xmarinka.png", alt="")
+							p.home-numeral-img-txt__box 80 #[br] чоловiк
+						p Поїздок в дитячі будинки
+				.col-md-3
+					div.home-numeral-item__box
+						.home-numeral-img__box
+							img(src="img/xmarinka.png", alt="")
+							p.home-numeral-img-txt__box 80 #[br] чоловiк
+						p Пожертвувань за місяць
+	section.map-ukraine__wrapper
+		.container
+			.row.map-ukraine__row
+				.col-md-12
+					h2.map-ukraine-title__box Карта дитячих будинкiв
+				.col-md-5
+					ul.map-ukraine-items__box
+						li Івано-Франківська область (15)
+						li АР Крим (15)
+						li Вінницька область (15)
+						li Волинська область (15)
+						li Дніпропетровська область (18)
+						li Донецька область (18)
+						li Житомирська область (18)
+						li Закарпатська область (18)
+						li Запорізька область (18)
+						li Кіровоградська область (13)
+						li Київська область (24)
+						li Курорт Буковель (18)
+						li Луганська область (18)
+						li Львівська область (15)
+						li Миколаївська область (15)
+						li Одеська область (15)
+						li Полтавська область (15)
+						li Рівненська область (15)
+						li Сумська область (15)
+						li Тернопільська область (15)
+						li Харківська область (15)
+						li Херсонська область (15)
+						li Хмельницька область (15)
+						li Черкаська область (15)
+						li Чернівецька область (15)
+						li Чернігівська область (15)
+					div.map-ukraine
+				.col-md-7
+					include ../../img/ukrainemap.svg
+	section.home-numeral__wrapper
+		.container
+			.row
+				.col-md-12
+					h2.home-numeral-title__box Основні цифри
+				.col-md-12
+					.owl-carousel.rewrite-carousel
+						div.home-numeral-item__box
+							img(src="img/one-xmarinka.png", alt="")
+							p Витрачено на #[br] Благо
+						div.home-numeral-item__box
+							img(src="img/two-xmarinka.png", alt="")
+							p Під опікою фонда
+						div.home-numeral-item__box
+							img(src="img/three-xmarinka.png", alt="")
+							p Поїздок в дитячі будинки
+						div.home-numeral-item__box
+							img(src="img/four-xmarinka.png", alt="")
+							p Пожертвувань за місяць
+						div.home-numeral-item__box
+							img(src="img/one-xmarinka.png", alt="")
+							p Витрачено на #[br] Благо
+						div.home-numeral-item__box
+							img(src="img/two-xmarinka.png", alt="")
+							p Під опікою фонда
+						div.home-numeral-item__box
+							img(src="img/three-xmarinka.png", alt="")
+							p Поїздок в дитячі будинки
+						div.home-numeral-item__box
+							img(src="img/four-xmarinka.png", alt="")
+							p Пожертвувань за місяць
+						div.home-numeral-item__box
+							img(src="img/one-xmarinka.png", alt="")
+							p Витрачено на #[br] Благо
+						div.home-numeral-item__box
+							img(src="img/two-xmarinka.png", alt="")
+							p Під опікою фонда
+						div.home-numeral-item__box
+							img(src="img/three-xmarinka.png", alt="")
+							p Поїздок в дитячі будинки
+						div.home-numeral-item__box
+							img(src="img/four-xmarinka.png", alt="")
+							p Пожертвувань за місяць
+						div.home-numeral-item__box
+							img(src="img/one-xmarinka.png", alt="")
+							p Витрачено на #[br] Благо
+						div.home-numeral-item__box
+							img(src="img/two-xmarinka.png", alt="")
+							p Під опікою фонда
+						div.home-numeral-item__box
+							img(src="img/three-xmarinka.png", alt="")
+							p Поїздок в дитячі будинки
+						div.home-numeral-item__box
+							img(src="img/four-xmarinka.png", alt="")
+							p Пожертвувань за місяць
+	section.partners__wrapper
+		.container
+			.row
+				.col-md-12
+					h2.partners-title__box Нашi партнери
+				.col-md-12
+					.owl-carousel.partners-carousel
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+						div.partners-item__box
+							img(src="img/google.png", alt="")
+	include ../templates/footer.pug

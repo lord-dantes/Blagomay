@@ -1,0 +1,29 @@
+.programm-item__box{
+	padding-top: 50px;
+	& .active-programm__banner{
+		margin-bottom: 20px;
+	}
+	& .programm-img__box{
+		width: 50%;
+		float: left;
+		margin: 0px 30px 20px 0px;
+	}
+	& .active-programm__content{
+		padding: 0px;
+		word-break: break-word;
+	}
+	& .active-line-programm__box{
+		width: 65%;
+	}
+	& .help__box{
+		margin: 0px;
+	}
+	& .programm-donate__box{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}
+.programm-item__wrapper{
+	margin-bottom: 40px;
+}

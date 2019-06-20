@@ -1,5 +1,10 @@
 @import "variables-functions-and-mixins";
 
+@media screen and (min-width: 1200px){
+	.container{
+		width: 1250px;
+	}
+}
 
 @import 'media';
 @import "fonts";

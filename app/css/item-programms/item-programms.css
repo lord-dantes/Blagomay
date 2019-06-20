@@ -1,0 +1,46 @@
+.programm-item__box {
+  padding-top: 50px;
+}
+
+.programm-item__box .active-programm__banner {
+  margin-bottom: 20px;
+}
+
+.programm-item__box .programm-img__box {
+  width: 50%;
+  float: left;
+  margin: 0px 30px 20px 0px;
+}
+
+.programm-item__box .active-programm__content {
+  padding: 0px;
+  word-break: break-word;
+}
+
+.programm-item__box .active-line-programm__box {
+  width: 65%;
+}
+
+.programm-item__box .help__box {
+  margin: 0px;
+}
+
+.programm-item__box .programm-donate__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.programm-item__wrapper {
+  margin-bottom: 40px;
+}
+/*# sourceMappingURL=../../css/item-programms/item-programms.css.map */
