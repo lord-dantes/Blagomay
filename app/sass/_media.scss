@@ -1,13 +1,17 @@
 @import "index/index";
+@import "help/help";
 @import "item-programms/item-programms";
 @import "item-news/item-news";
 
 @media (max-width: 1200px) {
     @import "index/index-max-1200";
+    @import "help/help-max-1200";
 }
 @media (max-width: 992px) {
     @import "index/index-max-992";
+    @import "help/help-max-992";
 }
 @media (max-width: 767px) {
-    @import "index/index-max-767";
+    @import "help/help-max-767";
+    @import "help/help-max-767";
 }

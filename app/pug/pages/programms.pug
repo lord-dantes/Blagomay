@@ -1,45 +1,75 @@
 extends ../default.pug
 block pageContent
 	include ../templates/header.pug
+	script.
+			var url_home = localStorage['urlapi'];
+			const urlprogramm = url_home + '/api/ru/programs/';
+			fetch(urlprogramm)
+			.then(response => response.json())
+			.then(data => {
+					for (var i = 0; i < data.results.length; i++) {
+
+						var programtitle = data.results[i].title;
+						var programdescription = data.results[i].content;
+						var programbackground = data.results[i].image;
+						var programmid = data.results[i].id;
+						//
+						var haveprice = data.results[i].pay_limit;
+						var havemaxprice = data.results[i].paid_sum;
+						//
+						var readyprice= 100* haveprice/havemaxprice;
+
+						var rounded = function(number){
+							return +number.toFixed(0) + '%';
+						}
+						if ( readyprice < 22) {
+							console.log(1);
+						}
+						$('.active-programms__wrapper > .container > .row > .col-md-12:first-child').after(
+							'<div class="col-md-4">'
+								+	'<div class="active-programm__box">'
+									+	'<div class="active-programm__banner" style="background: url(' + programbackground + ');">'
+										+	'<p class="active-programm-title__banner">' + programtitle + '</p>'
+									+	'</div>'
+									+	'<div class="active-programm__content">'
+										+	'<p>' + programdescription + '</p>'
+										+ '<a id="'+ programmid + '" href="/item-programms.html" class="active-programm-link__content"> Докладнiше </a>'
+										+ '<div class="active-programm-price__box">'
+											+ '<p>' + rounded(readyprice) + '</p>'
+											+ '<p>' + Number(havemaxprice).toFixed(0) + 'грн' + '</p>'
+										+ '</div>'
+										+ '<div class="noneactive-priceblock__box" id="noneactive-priceblock__box' + programmid +'">'
+											+ '<div class="active-priceblock__box" style="width:' + readyprice.toFixed(0) + '%' + '"> Зiбрано </div>'
+										+ '</div>'
+									+	'</div>'
+								+	'</div>'
+							+ '</div>'
+							);
+
+						var lenghtprogramms = $('.active-programms__wrapper .col-md-4').length;
+						if ( lenghtprogramms == 3 ) {
+							break;
+						}
+
+						$('.active-programm__content p:empty').remove();
+
+					}
+					$('.active-programm-allprogramm__box').click(function(event) {
+						localStorage.setItem('urlapi', url_home);
+					});
+					$('.active-programm-link__content').click(function(event) {
+						var myfirstDate = $(this).attr('id');
+						var firstdata = myfirstDate	;
+						var myData = firstdata;
+						localStorage.setItem( 'objectToPass', myData );
+						localStorage.setItem( 'urlapi', url_home );
+					});
+					//
+
+				});
 	section.active-programms__wrapper
 		.container
 			.row
 				.col-md-12
 					h2.active-programms-title__box Активнi програми
-				.col-md-4
-					.active-programm__box
-						.active-programm__banner
-							p.active-programm-title__banner Медичний кабiнет
-						.active-programm__content
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
-							a(class="active-programm-link__content" href="#") Докладнiше
-							div.active-programm-price__box
-								p 23%
-								p 35 000 грн
-							div.noneactive-priceblock__box
-								.active-priceblock__box Зiбрано
-				.col-md-4
-					.active-programm__box
-						.active-programm__banner
-							p.active-programm-title__banner Медичний кабiнет
-						.active-programm__content
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
-							a(class="active-programm-link__content" href="#") Докладнiше
-							div.active-programm-price__box
-								p 23%
-								p 35 000 грн
-							div.noneactive-priceblock__box
-								.active-priceblock__box Зiбрано
-				.col-md-4
-					.active-programm__box
-						.active-programm__banner
-							p.active-programm-title__banner Медичний кабiнет
-						.active-programm__content
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe!
-							a(class="active-programm-link__content" href="#") Докладнiше
-							div.active-programm-price__box
-								p 23%
-								p 35 000 грн
-							div.noneactive-priceblock__box
-								.active-priceblock__box Зiбрано
 	include ../templates/footer.pug

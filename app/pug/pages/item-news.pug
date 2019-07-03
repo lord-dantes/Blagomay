@@ -2,6 +2,20 @@ extends ../default.pug
 block pageContent
 	include ../templates/header.pug
 
+	script.
+			var myData = localStorage['objectToPass'];
+			var urlapi = localStorage['urlapi'];
+			var firstData = myData;
+			var url_home = urlapi;
+
+			const url = url_home + '/api/ru/news/' + firstData;
+			fetch(url)
+				.then(response => response.json())
+				.then(data => {
+						$('.news-title__box').html(data.title);
+						$('.news-item-content__box > p').html(data.content_ru)
+						$(".news-item-img__box > img").attr('src', data.image)
+				});
 	section.news-item__wrapper
 		.container
 			.row

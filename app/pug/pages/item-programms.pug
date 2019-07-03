@@ -2,6 +2,37 @@ extends ../default.pug
 block pageContent
 	include ../templates/header.pug
 
+	style.
+		.active-programm__content p{
+			overflow: unset;
+			text-overflow: initial;
+			white-space: unset;
+		}
+	script.
+			var myData = localStorage['objectToPass'];
+			var urlapi = localStorage['urlapi'];
+			var firstData = myData;
+			var url_home = urlapi;
+
+			const url = url_home + '/api/ru/programs/' + firstData;
+			fetch(url)
+				.then(response => response.json())
+				.then(data => {
+						$('.active-programm-title__banner').html(data.title);
+						$('.active-programm__content > p').html(data.content);
+						$('.active-programm__banner').css('backgroundImage', 'url('+ data.image + ')');
+						//-
+						var haveprice = data.pay_limit;
+						var havemaxprice = data.paid_sum;
+						var readyprice= 100* haveprice/havemaxprice;
+						var rounded = function(number){
+							return +number.toFixed(0) + '%';
+						}
+						$('.active-programm-price__box p:first-child').html(rounded(readyprice));
+						$('.active-programm-price__box p:nth-child(2)').html(Number(havemaxprice).toFixed(0) + 'грн');
+						$('.active-priceblock__box').css({width: readyprice.toFixed(0) + '%'});
+				});
+
 	section.programm-item__wrapper
 		.container
 			.row

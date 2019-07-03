@@ -123,50 +123,122 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>
       </div>
     </header>
-    <script>
-      var url_home = localStorage['urlapi'];
-      const url = url_home + '/api/ru/news/';
-      fetch(url)
-      .then(response => response.json())
-      .then(data => {
-      		for (var i = 0; i < data.results.length; i++) {
-      
-      			var newpubdate = data.results[i].pub_date;
-      
-      			newpubdate = newpubdate.replace('T',' ');
-      
-      			var newsid = data.results[i].id;
-      			var newsdescription = data.results[i].content_ru;
-      			var newsbackground = data.results[i].image;
-      
-      			$('.news__wrapper > .container > .row > .col-md-12:first-child').after(
-      				'<div class="col-md-3">'
-      				+ '<div class="news-item__box">'
-      					+	'<div class="news-item-data__box">' + newpubdate + '</div>'
-      						+ '<div class="news-item-banner__box" style="background: url(' + newsbackground + ');">'
-      							+ '<a id="' + newsid + '" class="news-item-banner-link" href="/item-news.html">Читати</a>'
-      						+ '</div>'
-      						+ '<div class="news-item-info__box">' + newsdescription + '</div>'
-      					+ '</div>'
-      				+ '</div>'
-      				);
-      		}
-      		$('.news-item-banner-link').click(function(event) {
-      			var myfirstDate = $(this).attr('id');
-      			var firstdata = myfirstDate;
-      			var myData = firstdata;
-      			localStorage.setItem( 'objectToPass', myData );
-      			localStorage.setItem( 'urlapi', url_home );
-      		});
-      		//
-      
-      	});
-    </script>
-    <section class="news__wrapper">
+    <section class="banner-start__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="banner-first__box">
+              <h1 class="banner-title__box">Ми благодійний <br>фонд «Благомай»</h1>
+              <p class="banner-description__box">
+                Основний напрямок благодійної діяльності фонду - допомога дітям,що знаходяться в дитячих будинках та соціальна адаптація таких дітей до реального життя.</p>
+              <div class="banner-group-btn__box"><a class="our-programms__button" href="#">Наші активні програми</a><a class="help__button" href="">Допомогти</a></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner-start__box-img"><img src="img/angel.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="type-working__wrapper">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="news-title__box">Новини</h2>
+            <h2 class="type-working__title">Види співпраці</h2>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="type-working__item">
+              <div class="type-working__itembox-img"><img src="img/photostock.png" alt="">
+                <div class="type-working__item-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aut, perferendis delectus eius ad neque nesciunt. Recusandae quae, sint illo corporis non dolor ipsum. Consequuntur necessitatibus reprehenderit animi obcaecati, dolorem quis quo, nemo, quasi repudiandae ipsam exercitationem. Sunt, laboriosam</div>
+              </div>
+              <div class="type-working__item-title">Благодійні акції</div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="type-working__allitems-button"><a class="help__button" href="#">Зв'язок</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stockwith-partners__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="stockwith-partners__title">Акції з партнерами</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-carousel stock-carousel">
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+              <div class="stock-item"><img class="stock-item__img" src="img/photostock2.png" alt="">
+                <div class="stock-item__box-info">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum, necessitatibus. Voluptatibus, ad. Dolore dolor blanditiis minima, natus. Esse harum consequuntur, aut quo explicabo veritatis ipsum architecto hic odio voluptates? Quas magni, quaerat, saepe earum voluptatibus error quasi enim quibusdam aut iusto et labore ex ea voluptas. Placeat, reprehenderit esse repellendus, voluptatum ipsam repellat ullam. Eaque, similique, aut? Id corrupti sit minus laboriosam in, sapiente voluptatum, sint nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias iure harum praesentium architecto eaque expedita nulla natus! Sapiente magnam sit, earum vero incidunt officiis repellendus, optio vel fugit nam natus. Inventore, iste!</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

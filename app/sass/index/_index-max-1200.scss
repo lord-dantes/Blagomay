@@ -1,0 +1,126 @@
+.hamburger__box{
+	display: block;
+}
+.nav__box{
+	display: none;
+}
+.social__box{
+	display: none;
+}
+.find__box{
+	display: none;
+}
+.help__box{
+	display: none;
+}
+.lang__box{
+	margin-left: auto;
+}
+.lang-items__box::before{
+	display: none;
+}
+.logo__box svg{
+	right: 0;
+	margin: 0 auto;
+}
+.hamburger__box{
+	position: absolute;
+	left: 0%;
+	top: 0%;
+}
+.header-active-mobile-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	& .lang__box{
+		margin: 0;
+	}
+	& .lang-items__box::before{
+		display: none;
+	}
+	& .nav__box{
+		display: block;
+	}
+	& .social__box{
+		display: block;
+	}
+	& .find__box{
+		display: block;
+	}
+	& .help__box{
+		display: block;
+		width: 40%;
+	}
+	& .logo__box svg{
+		position: absolute;
+		left: 0;
+	}
+	& .nav__box{
+		width: 100%;
+		margin: 100px auto 0px;
+	}
+	& .social__box{
+		width: 100%;
+	}
+	& .social-item{
+		height: auto;
+	}
+	& .lang__box{
+		position: absolute;
+		right: 5%;
+	}
+	& .social-item a svg{
+		width: 30px;
+		height: 30px;
+	}
+	& .li-item{
+		font-size: 18px;
+		padding: 20px 0px;
+	}
+	& .find__box{
+		margin: auto;
+	}
+	& .ul-items__box{
+		flex-direction: column;
+	}
+}
+/*//*/
+.banner-start__wrapper{
+	height: auto;
+	& img{
+		width: 100%;
+	}
+}
+.our-mission__wrapper{
+	& img{
+		width: 100%;
+	}
+}
+.banner-title__box{
+	font-size: 36px;
+	line-height: 1;
+}
+.news-item-banner__box{
+	text-align: center;
+}
+.home-numeral-item__box{
+	text-align: center;
+}
+.copyright__box{
+	flex-direction: column;
+	align-items: flex-start;
+}
+.footer-inputs__box{
+	margin-bottom: 30px;
+}
+#ukrainemap{
+	width: 100%;
+	height: 100%;
+}
+//
